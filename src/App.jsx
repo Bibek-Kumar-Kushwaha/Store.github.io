@@ -25,7 +25,7 @@ export default function App() {
 
   return (
     <>
-      <div className=" w-full">
+      <div >
         <Navbar />
         <Hero />
         <div className="w-full my-6">
@@ -38,7 +38,7 @@ export default function App() {
         </div>
         <div className="w-full my-6 mx-auto ">
           <div className="font-bold text-2xl md:text-4xl text-center">OUR PRODUCTS</div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 w-[80%] mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 w-[90%] mx-auto">
             <ProductCard products={products} />
           </div>
         </div>

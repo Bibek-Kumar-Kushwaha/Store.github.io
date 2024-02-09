@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Footer = () => {
+  const [searchValue, setSearchValue] = useState('');
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission logic if needed
@@ -11,6 +12,9 @@ const Footer = () => {
   const notify = () => {
     toast.success('Thank you for your suggestion!');
   };
+  const handleInputChange = (e) => {
+    setSearchValue(e.target.value);
+};
 
   return (
     <footer  id='Contact' className="bg-gray-800 text-white p-4">
@@ -21,7 +25,7 @@ const Footer = () => {
       </div>
       <div className="mt-4 border-t border-gray-700 pt-2 text-center">
         <p>&copy; 2024 Bibek Kumar Kushwaha. All rights reserved.</p>
-        <form onSubmit={handleSubmit} className="mt-4">
+        <form onSubmit={handleSubmit} className="mt-4 text-black">
           <label htmlFor="suggestion" className="block text-sm font-semibold mb-2">
             Have a suggestion? Let us know!
           </label>
@@ -31,6 +35,7 @@ const Footer = () => {
             name="suggestion"
             placeholder="Type your suggestion..."
             className="w-full p-2 border border-gray-600 rounded"
+            onChange={handleInputChange}
           />
           <button
             type="submit"

@@ -24,8 +24,11 @@ const ProductCard = () => {
 
   return (
     <>
-      
-      {loading && <div className='w-full'><FcProcess  className='animate-spin text-9xl mx-auto'/></div>} {/* Show loading message while fetching data */}
+     {loading &&
+      <div className='w-full text-9xl animate-spin col-span-1 md:col-span-2 lg:col-span-3 xl:col-span-4'>
+        <FcProcess  className='mx-auto' />
+        </div>
+    }
       {products.map((product, index) => (
         <div id='Product' key={index} className="m-4  rounded overflow-hidden shadow-lg flex flex-col">
           <img

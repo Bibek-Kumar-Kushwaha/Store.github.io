@@ -1,3 +1,2 @@
-https://themewagon.github.io/famms/index.html
-
-https://dummyjson.com/products
+Author : Bibek Kumar Kushwaha
+In this project i want to crate a store app with different features
